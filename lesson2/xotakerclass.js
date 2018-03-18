@@ -19,6 +19,23 @@ class Xotaker extends KendaniEak {
        this.stanalNorKordinatner();
        return super.yntrelVandak(ch);
    }
+
+ utel() {
+    
+        var norVandak = random(this.yntrelVandak(1));
+        if (norVandak) {
+            matrix[this.y][this.x] = 0;
+            matrix[norVandak[1]][norVandak[0]] = 2;
+
+            this.x = norVandak[0];
+            this.y = norVandak[1];
+     
+            console.log("keraxot");
+            this.energy++;
+        }
+        
+    }
+
 sharjvel() {
      
         var norVandak = random(this.yntrelVandak(0));
@@ -33,27 +50,13 @@ sharjvel() {
             this.energy--;
             
         }
-        
-        
-    }
-
-    utel() {
-    
-        var norVandak = random(this.yntrelVandak(1));
-        if (norVandak) {
-            matrix[this.y][this.x] = 0;
-            matrix[norVandak[1]][norVandak[0]] = 2;
-
-            this.x = norVandak[0];
-            this.y = norVandak[1];
-     
-            console.log("keraxot");
-            this.energy++;
-        }
         else {
-            this.sharjvel();
+            this.utel();
         }
+        
     }
+
+   
     bazmanal() {
         var norVandak = random(this.yntrelVandak(0));
         if (norVandak) {

@@ -3,7 +3,7 @@ class KendaniEak {
         this.x = x;
         this.y = y;
         this.index = index;
-        this.energy = 0;
+        this.energy = 3;
         this.multiply = 0;
         this.directions = [
 
