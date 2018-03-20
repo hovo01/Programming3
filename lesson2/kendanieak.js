@@ -1,12 +1,16 @@
 class KendaniEak {
-    constructor(x, y, index) {
+     constructor(x, y) {
         this.x = x;
         this.y = y;
-        this.index = index;
-        this.energy = 3;
-        this.multiply = 0;
-        this.directions = [
+        this.energy = 0;
+        this.directions = [];
+        
 
+
+    }
+
+    stanalNorKordinatnerGsh() {
+        this.directions = [
             [this.x - 1, this.y - 1],
             [this.x, this.y - 1],
             [this.x + 1, this.y - 1],
@@ -16,9 +20,10 @@ class KendaniEak {
             [this.x, this.y + 1],
             [this.x + 1, this.y + 1]
         ];
-
     }
+
     yntrelVandak(ch) {
+        this.stanalNorKordinatnerGsh();
         var found = [];
         for (var i in this.directions) {
             var x = this.directions[i][0];
